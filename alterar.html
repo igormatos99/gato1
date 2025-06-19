@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alterar Cadastro - PetScript</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #06336d;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: orange;
+      flex: 1;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      flex: 2;
+    }
+
+    .nav-container a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: text-decoration 0.3s;
+    }
+
+    .nav-container a:hover {
+      text-decoration: underline;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #06336d;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #06336d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #082f5b;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 10px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">PetScript</div>
+    <nav class="nav-container">
+      <a href="paginainicial.html">Página Inicial</a>
+      <a href="ongs.html">ONGs</a>
+      <a href="instituicoes.html">Instituições</a>
+      <a href="contato.html">Contato</a>
+      <a href="adoção.html">Adoção</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Alterar Cadastro</h2>
+    <form>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Nova Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="confirmar">Confirmar Nova Senha:</label>
+      <input type="password" id="confirmar" name="confirmar" required>
+
+      <button type="submit">Salvar Alterações</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+
+

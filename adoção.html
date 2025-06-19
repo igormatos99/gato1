@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>PetScript</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #06336d;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 50px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 56px;
+      font-weight: bold;
+      color: orange;
+      flex: 1;
+    }
+
+    .nav-horizontal {
+      display: flex;
+      gap: 50px;
+      font-size: 20px;
+      justify-content: center;
+      flex: 3;
+      flex-wrap: wrap;
+    }
+
+    .nav-horizontal a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-horizontal a:hover {
+      text-decoration: underline;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .login-form input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      width: 200px;
+    }
+
+    .login-form button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #0a758c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-form a {
+      font-size: 14px;
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .filters {
+      width: 200px;
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px;
+      margin-right: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .filters h4 {
+      margin-bottom: 10px;
+    }
+
+    .filters select, .filters label {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .main-content {
+      flex-grow: 1;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .pet-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .pet-card img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .pet-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .pet-card h5 {
+      font-size: 12px;
+      color: #ff914d;
+      margin: 5px 0;
+    }
+
+    .pet-card p {
+      font-size: 14px;
+      color: #444;
+      margin: 5px 0 10px;
+    }
+
+    .pet-card a button {
+      background-color: #ff914d;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .pet-card a button:hover {
+      background-color: #e67d33;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">PetScript</div>
+
+  <nav class="nav-horizontal">
+    <a href="paginainicial.html">Página Inicial</a>
+    <a href="#">ONGs</a>
+    <a href="#">Instituições</a>
+    <a href="#">Contato</a>
+    <a href="alterar.html">Alterar Cadastro</a>
+  </nav>
+
+  <form class="login-form">
+    <input type="text" placeholder="Usuário">
+    <input type="password" placeholder="Senha">
+    <button type="submit">Entrar</button>
+    <a href="#">Esqueceu a senha?</a>
+    <a href="cadastro.html">Cadastrar</a>
+  </form>
+</header>
+
+<div class="container">
+  <div class="filters">
+    <h4>Filtros</h4>
+
+    <label>Estado*<br>
+      <select>
+        <option>Selecione</option>
+        <option value="SC" selected>Santa Catarina</option>
+        <option value="SP">São Paulo</option>
+      </select>
+    </label>
+
+    <label>Cidade*<br>
+      <select>
+        <option>Selecione</option>
+        <option value="Criciúma" selected>Criciúma</option>
+        <option value="Içara">Içara</option>
+        <option value="Ermo">Ermo</option>
+      </select>
+    </label>
+
+    <label>Loja Petz<br>
+      <select>
+        <option>Selecione</option>
+      </select>
+    </label>
+
+    <label>ONG<br>
+      <select>
+        <option>Selecione</option>
+        <option value="AdoteCode" selected>AdoteCode</option>
+        <option value="AnimalByte">Animal Byte</option>
+        <option value="PawsPixel">Paws & Pixel</option>
+        <option value="Outros">Outros</option>
+      </select>
+    </label>
+
+    <label>Espécie<br>
+      <select>
+        <option>Selecione</option>
+      </select>
+    </label>
+
+    <label>Idade<br>
+      <select>
+        <option>Selecione</option>
+      </select>
+    </label>
+
+    <label>Porte<br>
+      <select>
+        <option>Selecione</option>
+      </select>
+    </label>
+
+    <label>Sexo<br>
+      <select>
+        <option>Selecione</option>
+        <option value="Feminino" selected>Feminino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+    </label>
+
+  </div>
+
+  <div class="main-content">
+    <h2>Pets disponíveis</h2>
+    <div class="cards-container">
+
+      <div class="pet-card">
+        <img src="cachorro1.jpg" alt="cachorro1">
+        <h5>AdoteCode</h5>
+        <h3>Kalyel</h3>
+        <p>IÇARA, SC</p>
+        <a href="kalyel.html"><button>Preguiça</button></a>
+      </div>
+
+      <div class="pet-card">
+        <img src="cachorro2.jpg" alt="cachorro2">
+        <h5>Paws & Pixel</h5>
+        <h3>Igor</h3>
+        <p>FORQUILHINHA, SC</p>
+        <a href="igor.html"><button>Quero adotar</button></a>
+      </div>
+
+      <div class="pet-card">
+        <img src="cachorro3.jpg" alt="cachorro3">
+        <h5>Animal Byte</h5>
+        <h3>Alan</h3>
+        <p>JOINVILE, SC</p>
+        <a href="alan.html"><button>Quero adotar</button></a>
+      </div>
+
+      <div class="pet-card">
+        <img src="gato1.jpg" alt="gato1">
+        <h5>Bigodes Tech</h5>
+        <h3>Lua</h3>
+        <p>FLORIANÓPOLIS, SC</p>
+        <a href="lua.html"><button>Quero adotar</button></a>
+      </div>
+
+      <div class="pet-card">
+        <img src="gato2.jpg" alt="gato2">
+        <h5>Meow Works</h5>
+        <h3>Luiz Eduardo</h3>
+        <p>CRICIÚMA, SC</p>
+        <a href="luiz.html"><button>Macho alfa</button></a>
+      </div>
+
+      <div class="pet-card">
+        <img src="gato3.jpg" alt="gato3">
+        <h5>FocinhoSoft</h5>
+        <h3>Luna</h3>
+        <p>CHAPECÓ, SC</p>
+        <a href="luna.html"><button>Quero adotar</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

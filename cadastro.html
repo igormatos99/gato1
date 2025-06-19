@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro - Adoção de Animais</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #000000 0%, #1a1a2e 100%);
+      color: white;
+      display: flex;
+      height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .left-side {
+      flex: 1;
+      background: url('logo.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+    }
+
+    .left-side::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .left-side-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .left-side h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .left-side p {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .right-side {
+      flex: 1;
+      background: white;
+      color: black;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .right-side h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      border-color: #50c0ff;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #50c0ff;
+      color: white;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3a9edc;
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    a {
+      color: #50c0ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .left-side, .right-side {
+        width: 100%;
+        flex: none;
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="left-side">
+    <div class="left-side-content">
+      <h1>Cadastre-se para adotar um amigo</h1>
+      <p>Encontre animais para adoção e dê um lar cheio de amor para eles. Junte-se a nós!</p>
+    </div>
+  </div>
+  <div class="right-side">
+    <h2>Crie sua conta</h2>
+    <form>
+      <label for="nome">Nome completo *</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+
+      <label for="cpf">CPF *</label>
+      <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" 
+             pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" 
+             title="Digite um CPF válido, como 123.456.789-00" required />
+
+      <label for="idade">Idade *</label>
+      <input type="number" id="idade" name="idade" placeholder="Sua idade" min="0" max="120" required />
+
+      <label for="region">Seu país/região *</label>
+      <select id="region" name="region" required>
+        <option value="Brasil" selected>Brasil</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Estados Unidos">Estados Unidos</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" placeholder="Seu e-mail" required />
+
+      <label for="password">Senha *</label>
+      <input type="password" id="password" name="password" placeholder="Senha" 
+             pattern="(?=.*\d)(?=.*[a-z]).{8,}" 
+             title="A senha deve conter pelo menos 8 caracteres, incluindo um número e uma letra minúscula" required />
+
+      <label>
+        <input type="checkbox" name="newsletter" />
+        Receber novidades e notícias sobre adoção
+      </label>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p class="footer-text">
+      Ao criar uma conta, você concorda com nossos <a href="#">Termos de Serviço</a> e nossa <a href="#">Política de Privacidade</a>.
+    </p>
+  </div>
+</body>
+</html>
+
+
+
+
